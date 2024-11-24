@@ -4,7 +4,14 @@
 
 import random
 
-user_action = input("Enter throw (rock, paper, scissors): ")
+
+while True:
+    user_action = input("Enter throw (rock, paper, scissors): ")
+    if user_action.lower() == "quit":
+        print("Thanks for playing!")
+        break
+
+
 ai_action = random.choice(["rock", "paper", "scissors"])
 
 print(f"\nYou chose {user_action}, AI chose {ai_action}.\n")
@@ -26,3 +33,6 @@ elif user_action == "scissors":
         print("Scissors cuts paper! You win!")
     else:
         print("Rock smashes scissors! You lose.")
+
+else:
+    print("Invalid input. Please try again.")
